@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="index.css">
+   <title>Neo College</title>
+</head>
+<body>
+   <nav id="navlist">
+      <ul>
+         <li><h4>NEO.</h4></li>
+         <li>Home</li>
+         <li>About</li>
+         <li>Course</li>
+         <li>Faculty</li>
+      </ul>
+   </nav>
+   <div id="main-box">
+      <h1>NEO COLLEGE, CHENNAI</h1>
+      <p>India's One Of The Best Engeneering College</p>
+      <button id="enroll-button">ENROLL NOW</button>
+   </div>
+   <div id="container">
+      <h2>FACILITIES</h2>
+      <div class="row">
+         <div class="column">
+         <a href="#campus"><img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt=""></a>
+         <a>CAMPUS</a>
+         </div>
+         <div class="column">
+            <a href="#canteen"><img src="https://images.unsplash.com/photo-1559560329-e4b17eb5726b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbGxlZ2UlMjBjYW50ZWVufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt=""></a>
+            <a>CANTEEN</a>
+         </div>
+         <div class="column">
+            <a href="#library"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvbGxlZ2UlMjBsaWJyYXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt=""></a>
+            <a>LIBRARY</a>
+         </div>
+      </div>
+      <section id="programs">
+         <h2>Our Programs</h2>
+         <div id="program1" class="program">
+            <div class="front">
+               <img src="https://cse.umn.edu/sites/cse.umn.edu/files/me308_panoramic_cropped_small.jpg" alt="Program 1">
+               <h3>Computer Science Engineering</h3>
+            </div>
+            <div class="back">
+               <p>"Explore the exciting world of Computer Science and Engineering at our college, where innovation meets technology to shape the future."</p>
+            </div>
+         </div>
+         <div id="program2" class="program">
+            <div class="front">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOEmgHx3xyUSDmRKv5YRTxiz6abBBjEp1XaQ&usqp=CAU" alt="Program 2">
+               <h3>Electronics and Communications Engineering</h3>
+            </div>
+            <div class="back">
+               <p>"Explore the dynamic world of Electronics and Communication Engineering, where innovation meets technology to shape the future of communication, electronics, and more."</p>
+            </div>
+         </div>
+         <div id="program3" class="program">
+            <div class="front">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS80llC9V_1fXrw-xNhy_kKKoOZfDjGuTbJtw&usqp=CAU" alt="Program 3">
+               <h3>Civil Engineering</h3>
+            </div>
+            <div class="back">
+               <p>"Explore the fascinating world of civil engineering and shape the future of infrastructure through our comprehensive programs and cutting-edge research."</p>
+            </div>
+         </div>
+      </section>
+      <div id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to contact us using the information below:</p>
+        <ul>
+          <li>Email: info@neocollege.com</li>
+          <li>Phone: 123-456-7890</li>
+          <li>Address: 123 College Street, City, Country</li>
+        </ul>
+      </div>
+    
+      <div id="footer">
+        <p>&copy; 2023 neo College. All rights reserved.</p>
+      </div>
+   </div>
+
+   <script>
+      document.getElementById('enroll-button').addEventListener('click', function() {
+         // Create a pop-up form for enrolling a student
+         var popup = document.createElement('div');
+         popup.className = 'popup';
+   
+         var form = document.createElement('form');
+         form.className = 'popup-form';
+         form.innerHTML = `
+            <h3>Enroll Now</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <button type="submit">Enroll</button>
+            <button type="button" onclick="closePopup()">Cancel</button>
+         `;
+   
+         // Prevent clicking outside the form from closing the pop-up
+         form.addEventListener('click', function(event) {
+            event.stopPropagation();
+         });
+   
+         // Close the pop-up when the form is submitted
+         form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Perform enrollment logic here
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            // Display a success message
+            alert('Enrollment successful for ' + name + ' with email ' + email);
+            // Close the pop-up
+            closePopup();
+         });
+   
+         popup.appendChild(form);
+         document.body.appendChild(popup);
+   
+         // Function to close the pop-up
+         function closePopup() {
+            document.body.removeChild(popup);
+         }
+      });
+   </script>
+   
+   
+</body>
+</html>

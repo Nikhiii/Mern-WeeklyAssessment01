@@ -1,0 +1,43 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f6f6;
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+#pagetop {
+  background-image: url("https://plus.unsplash.com/premium_photo-1661775756810-82dbd209fc95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1954&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #0b0c10;
+  padding: 250px;
+  text-align: center;
+}
+
+#pagetop h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  background-color: #0b0c10;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#about {
+  background-color: #0b0c10;
+  color: #e8f7ff;
+  padding: 50px;
+  text-align: center;
+}
+/* Write your css code here */
